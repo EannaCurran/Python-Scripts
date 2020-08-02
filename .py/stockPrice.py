@@ -8,7 +8,7 @@ try:
     text = soup.find("div", attrs={"data-reactid": "28"})
     price = text.find("span", attrs={"data-reactid": "32"}).get_text()
     change = text.find("span", attrs={"data-reactid": "33"}).get_text()
-    print("{}: {}{}".format(sys.argv[1], price, change))
+    print("{}: {} {}".format(sys.argv[1], price, change))
 
 except AttributeError:
     print("Error: Ticker {} cannot be found".format(sys.argv[1]))
