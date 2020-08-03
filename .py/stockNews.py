@@ -15,6 +15,7 @@ try:
         count += 1
         total += sentiment
         print("{} {} ".format(sentence, sentiment))
+    print("Average sentiment: {}".format(total/count))
 
 except Exception as e:
-    print(e)
+    print("Error occurred: {}".format(e))
