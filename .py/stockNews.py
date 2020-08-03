@@ -12,6 +12,9 @@ try:
     for headline in soup.find_all("h3"):
         sentence = (headline.text.strip())
         sentiment = TextBlob(sentence).sentiment.polarity
+        count += 1
+        total += sentiment
+        print("{} {} ".format(sentence, sentiment))
 
 except Exception as e:
     print(e)
